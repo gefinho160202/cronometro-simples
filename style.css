@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    background-image: url("./leaves.jpg");
+}
+
+h1,
+h2 {
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px auto;
+    gap: 25px;
+}
+
+button {
+    background: #0e9948;
+    margin-left: 30px;
+    width: 130px;
+    font-size: 2rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+.stop:hover {
+    background: #5070d8;
+}
+
+.limpar:hover {
+    background: #ce1019;
+}
+
+@media(max-width:480px) {
+    container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+
+    h1{
+     text-align: center;
+
+      
+     }
+
+
+    button{
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+    }
+}
