@@ -1,12 +1,8 @@
-/*
-    setTimeout => Executa uma vez , 
-    executa depois do tempo determinado
 
-     setInterval => Executa infinita vezes
 
-     clearInterval -> ele pausa o setInterval
-
-*/
+const startButton = document.querySelector(".start")
+const stoptButton = document.querySelector(".stop")
+const limparButton = document.querySelector(".limpar")
 
 let horas = 0
 let minutos = 0
@@ -18,6 +14,11 @@ let h2 = document.querySelector("h2")
 
 
 function start() {
+
+    startButton.setAttribute("disabled", true)
+    stoptButton.removeAttribute("disabled")
+    limparButton.removeAttribute("disabled")
+
     cron = setInterval(function () {
         timer()
 
@@ -26,6 +27,7 @@ function start() {
 }
 
 function stop() {
+
     clearInterval(cron)
 }
 
@@ -58,4 +60,19 @@ function timer() {
     h2.innerText = format
 
     return format
+}
+
+startButton.onclick = () => {
+    startButton.setAttribute("disabled", true)
+    start()
+}
+
+stoptButton.onclick = () => {
+    startButton.removeAttribute("disabled",true)
+    stop()
+}
+
+limparButton.onclick = ()=>{
+    startButton.removeAttribute("disabled",true)
+    zerar()
 }
